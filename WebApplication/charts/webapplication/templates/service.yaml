@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "webapplication.fullname" . }}
+  labels:
+    app: {{ template "webapplication.name" . }}
+    chart: {{ template "webapplication.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app: {{ template "webapplication.name" . }}
+    release: {{ .Release.Name }}
