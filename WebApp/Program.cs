@@ -13,6 +13,7 @@ namespace WebApp
     {
         public static void Main(string[] args)
         {
+            Console.WriteLine("Starting application");
             CreateHostBuilder(args).Build().Run();
         }
 
