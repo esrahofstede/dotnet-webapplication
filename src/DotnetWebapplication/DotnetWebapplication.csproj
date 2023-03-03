@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>989f2673-003c-4792-aad6-8f129d96ae90</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+    <DockerComposeProjectPath>..\..\docker-compose.dcproj</DockerComposeProjectPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DotnetWebaplication.Abstractions\DotnetWebaplication.Abstractions.csproj" />
+    <ProjectReference Include="..\DotnetWebaplication.Entities\DotnetWebaplication.Entities.csproj" />
+    <ProjectReference Include="..\DotnetWebapplication.Infrastructure\DotnetWebapplication.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

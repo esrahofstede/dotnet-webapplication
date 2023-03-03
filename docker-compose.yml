@@ -1,8 +1,8 @@
 version: '3.4'
 
 services:
-  webapplication:
-    image: ${DOCKER_REGISTRY-}webapplication
+  dotnetwebapplication:
+    image: ${DOCKER_REGISTRY-}dotnetwebapplication
     build:
       context: .
-      dockerfile: WebApplication\Windows1903.Dockerfile
+      dockerfile: src/DotnetWebapplication/Dockerfile
